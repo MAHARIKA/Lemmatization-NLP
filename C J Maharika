@@ -1,0 +1,15 @@
+pip install nltk
+import nltk
+nltk.download('punkt')
+nltk.download('wordnet')
+import nltk
+nltk.download('omw-1.4')
+import nltk
+from nltk.stem import WordNetLemmatizer
+from nltk.tokenize import word_tokenize
+lemmatizer = WordNetLemmatizer()
+sentence = "The cats are running faster than the dog."
+words = word_tokenize(sentence)
+lemmatized_words = [lemmatizer.lemmatize(word) for word in words]
+print("Original Sentence:", sentence)
+print("Lemmatized Sentence:", ' '.join(lemmatized_words))
